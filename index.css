@@ -1,28 +1,198 @@
-body{ background-image: url("img/img.fundo5.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll, fixed;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Sarala&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ text-decoration: none;
+}
+     
+body{
+ font-size: 100%;
+ background-image: url("img/img.fundo10.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: scroll, fixed;
+ color: black;
 }
 
-ul{display: flex;
-   justify-content: space-between;
-   list-style-type: none;
-   align-items: center;
-   padding: 16px;
+.cabecalho{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ padding: 24px;
 }
 
-a{color: white;
-    text-decoration: none;
+.cabecalho-menu{
+ display: flex;
+ gap: 32px;
+}
+
+.cabecalho-menu-item{
+ font-family: 'Sarala', sans-serif;
+ color: black;
+ font-weight: 400;
+ font-size: 18px;
+}
+
+.conteudo{
+ margin: 42px;
+ border-top: 0.4px solid white;
+}
+
+.conteudo-principal{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-around;
+}
+
+.conteudo-principal-escrito{
+ display: flex;
+ flex-direction: column;
+ gap: 32px;
+}
+
+.conteudo-principal-escrito-titulo{
+ font-family: 'Cormorant Upright', serif;
+ font-weight: 400;
+ font-size: 64px;
+ color: black;
+}
+
+.conteudo-principal-escrito-subtitulo{
+ font-family: 'Sarala', sans-serif;
+ font-weight: 400;
+ font-size: 24px;
+ color: black; 
+}
+
+.conteudo-principal-imagem{
+ width: 430px;
+ height: 550px;
+ border: solid;
+ color: black;
+}
+
+.conteudo-secundario{
+ display: flex;
+ flex-direction: column;
+ gap: 24px;
+}
+
+.conteudo-secundario-titulo{
+ font-family: 'Sarala', sans-serif;
+ font-weight: 400px;
+ font-size: 24px;
+ color: black;
+ margin-bottom: 16px;
+}
+
+.conteudo-secundario-paragrafo{
+ font-family: 'Sarala', sans-serif;
+ font-weight: 300px;
+ font-size: 19px;
+ color: black;
+ text-align: center;
+}
+
+.primeiro{
+ text-align: center;
+}
+
+a:hover{
+ color: white;
+ transition: 0.3s all;
+}
+
+#inscreva-se-bnt{
+ border: 2px solid black;
+ padding: 10px;
+ border-radius: 20px;
+
+}.formulario{
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.box{
+ color: white;
+ position: absolute;
+ top: 50%;
+ left: 25%;
+ transform: translate(-50%,-50%);
+ background-color: rgba(0, 0,0,0.5);
+ padding: 15px;
+ border-radius: 15px;
+ width: 25%;
+}
+ 
+fieldset{
+ border: 3px solid dodgerblue;
+}
+
+legend{
+ border: 1px solid dodgerblue;
+ padding: 10px;
+ text-align: center;
+ background-color: dodgerblue;
+ border-radius: 8px;
+ }
+ 
+.inputbox{
+ position: relative;
+}
+    
+.inputuser{
+ background: none;
+ border: none;
+ border-bottom: 1px solid white;
+ outline: none;
+ color: white;
+ font-size: 15px;
+ width: 100%;
+ letter-spacing: 2px;
 
 }
-img{width: 150px;
-    height: 250px;
-    border: 5px solid;
-    color: black;
 
+.labelinput{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ pointer-events: none;
+ transition: .5s;
 }
-.center{text-align: center;
+
+.inputuser:focus ~.labelinput, 
+.inputuser:valid ~.labelinput{
+ top: -20px;
+ font-size: 12px;
+ color: dodgerblue;
+}
+
+#data_nascimento{
+ border: none;
+ padding: 8px;
+ border-radius: 10px;
+ outline: none;
+ font-size: 15px;
+}
+
+#submit{
+ color: white;
+ width: 100%;
+ border: none;
+ padding: 15px;
+ background-color: dodgerblue;
+ font-size: 15px;
+ cursor: pointer;
+ border-radius: 10px;
+}
+
+.logo{ 
+ position: absolute;
+ left: 700px;
+ top: 550px;
+ display: flex;
+ gap: 32px;      
 
 }
